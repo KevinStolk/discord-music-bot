@@ -1,7 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 const CHANNEL_ROLE = process.env.CHANNELROLE;
-const PERMISSION_ROLE = process.env.PERMISSIONROLE;
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -12,11 +11,6 @@ module.exports = {
       .fetchPinned()
       .then((messages) => {
         if (messages.size == 50) {
-          if (!interaction.member.permissions.has(PERMISSION_ROLE)) {
-            interaction.editReply(
-              "You can't use this command because u don't have the admin role."
-            );
-          }
           interaction.editReply(`Pin Limit!!!!!! Channel going in lockdown.`);
           interaction.channel.permissionOverwrites.create(
             interaction.guild.roles.cache.get(CHANNEL_ROLE),
