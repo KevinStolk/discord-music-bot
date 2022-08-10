@@ -65,6 +65,10 @@ node index.js
 
 - Plays a playlist of songs from given url
 
+`/loop (mode)`
+
+- Loops the current song or queue by giving a mode argument
+
 `/pause`
 
 - Pauses the music
