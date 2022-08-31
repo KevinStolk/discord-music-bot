@@ -1,0 +1,12 @@
+# fly.toml file generated for steenbot on 2022-08-31T08:58:30+02:00
+
+app = "steenbot"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[env]
+
